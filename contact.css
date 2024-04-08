@@ -1,0 +1,83 @@
+/* Reset some default browser styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Style the header */
+#heading {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Style the navigation bar */
+#navi {
+    text-align: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+#navi a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+}
+
+/* Style the social icons */
+.social_icons {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+
+/* Style the form container */
+form {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the input boxes */
+.input-box {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style the message input box */
+.input-message {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 150px; /* Increase the height for message input */
+}
+
+/* Style the submit button */
+#btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style the submit button on hover */
+#btn:hover {
+    background-color: #555;
+}

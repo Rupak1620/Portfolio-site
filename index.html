@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="new.css">
+    <title>Home - My Personal Website</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div id="left-items">
+            <img id="pp" src="WhatsApp Image 2022-10-12 at 8.43.40 PM.ico">
+            <a href="index.html" class="logo">Rupak Aryal</a>
+        </div>
+
+
+        <nav class="navbar">
+
+
+            <a href="index.html" class="active">Home</a> 
+            <a href="about.html">About Me</a> 
+            <a href="Resume.html">Resume</a> 
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h1>Hello Everyone, I am Rupak Aryal</h1>
+            <h3>Currently pursuing Btech CSE.</h3>
+            <p>Welcome everyone to my website. Its an honour for me to welcome you 
+                all as its my first project on making this website.If you have any queries 
+                you can contact me. And if you want to know more about me you can click
+                on the button below or you can select from menu.
+            </p>
+            <a href="about.html" class="btn">Know more</a>
+        </div>
+
+        <div class="home-img">
+            <div class="glowing_circle">
+                <span></span>
+                <span></span>
+                <div class="image">
+                    <img src="pp.jpg" alt="Profile Picture">
+                </div>
+
+            </div>
+
+        </div>
+        
+
+    </section>
+   
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var homeContent = document.querySelector('.home-content');
+            homeContent.classList.add('show-text');
+        });
+    </script>
+    
+</body>
+
+</html>

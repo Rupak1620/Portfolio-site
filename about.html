@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="new.css">
+    <title>About Me - My Personal Website</title>
+</head>
+<body>
+    <header class="header">
+        <div id="left-items">
+            <img id="pp" src="WhatsApp Image 2022-10-12 at 8.43.40 PM.ico">
+            <a href="index.html" class="logo">Know More About Me</a>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Home</a> 
+            <a href="about.html" class="active">About Me</a> 
+            <a href="Resume.html">Resume</a> 
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>   
+    <div class="home-content-about">
+       <p> <h3><pre>
+               Welcome everyone to my website. Its an honour for me to welcome you all as
+               its my first project on making this website.If you have any queries you can
+               contact me. My name is Rupak Aryal. I am form Nepal and I have completed my
+               high school studies fron Nepal and now I am in India to pursue the B-tech in
+               CSE. If you want to directly contact me you can send a mail to my mail address
+               which you can find it in the contact page.
+        </pre>
+    </h3>
+        </p>
+    </div>
+    <div class="photo-scroll-container">
+        <img class="aboutImage1" src="about image1.jpg" alt="Photo 1" height="250">
+        <img src="about image 2.jpg" alt="Photo 2" height="250">
+        <img src="about image3.jpg" alt="Photo 3" height="250">
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var homeContentAbout = document.querySelector('.home-content-about');
+            homeContentAbout.classList.add('show-text');
+        });
+    </script>     
+</body>
+</html> 
