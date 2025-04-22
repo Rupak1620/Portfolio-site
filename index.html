@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="new.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Rupak Aryal | Personal Portfolio</title>
+    <style>
+        .social-icon {
+            color: #2c3e50;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+        
+        .social-icon:hover {
+            color: #3498db;
+            transform: translateY(-3px);
+        }
+
+        .contact-method i {
+            color: #3498db;
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        .publication-links .btn-outline i {
+            color: #3498db;
+            margin-right: 5px;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 5px;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #2980b9, #3498db);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #3498db;
+            color: #3498db;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 5px;
+        }
+
+        .btn-outline:hover {
+            background: #3498db;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .cta-buttons .btn {
+            margin-right: 15px;
+        }
+
+        .publication-links .btn-outline {
+            margin-right: 10px;
+        }
+
+        /* Profile Image Animation */
+        .glowing_circle {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 20px rgba(52, 152, 219, 0.2);
+            }
+            to {
+                box-shadow: 0 0 30px rgba(52, 152, 219, 0.4);
+            }
+        }
+
+        /* Skills Progress Bar */
+        .skill-progress {
+            margin: 20px 0;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: #f0f0f0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            border-radius: 5px;
+            transition: width 1s ease-in-out;
+        }
+
+        /* Enhanced Publication Card */
+        .publication-item {
+            background: transparent;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .publication-item:hover {
+            transform: translateY(-5px);
+            border-color: #ffffff;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+        }
+
+        .publication-header h3 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .publication-date {
+            color: #ffffff;
+            font-weight: 500;
+            opacity: 0.8;
+        }
+
+        .publication-details {
+            color: #ffffff;
+        }
+
+        .publication-authors {
+            color: #ffffff;
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+
+        .publication-conference {
+            color: #ffffff;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        /* Section Background Pattern */
+        .about-section, .publications-section, .contact-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-section::before, .publications-section::before, .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(45deg, rgba(52, 152, 219, 0.05) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(52, 152, 219, 0.05) 25%, transparent 25%);
+            background-size: 20px 20px;
+            z-index: -1;
+        }
+
+        /* Enhanced Contact Form */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #f0f0f0;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 10px rgba(52, 152, 219, 0.1);
+        }
+
+        /* Add this to your skills section */
+        .skill-progress {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div id="left-items">
+            <img id="pp" src="WhatsApp Image 2022-10-12 at 8.43.40 PM.ico" alt="Logo">
+            <a href="#home" class="logo">Rupak Aryal</a>
+        </div>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#publications">Publications</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="home-content">
+            <h1>Hi, I'm <span class="highlight">Rupak Aryal</span></h1>
+            <h3>Computer Science Student</h3>
+            <p>I'm passionate about technology and software development. Currently pursuing my B.Tech in Computer Science and Engineering, I'm constantly exploring new technologies and building projects to enhance my skills.</p>
+            
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="#about" class="btn">Learn More</a>
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
+        </div>
+
+        <div class="home-img">
+            <div class="glowing_circle">
+                <span></span>
+                <span></span>
+                <div class="image">
+                    <img src="pp.jpg" alt="Rupak Aryal">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a dedicated Computer Science student with a passion for technology and innovation. My journey in the world of programming has been exciting and challenging, pushing me to constantly learn and grow.</p>
+                    <p>I am particularly interested in Artificial Intelligence and Machine Learning research. My recent publication on "Deep Neural Networks for Disease Classification from Endoscopic Imaging" has sparked my passion for AI applications in healthcare and medical imaging. I am eager to pursue further studies in AI research, particularly in areas such as:</p>
+                    <ul style="margin-bottom: 20px;">
+                        <li>Computer Vision and Medical Image Analysis</li>
+                        <li>Natural Language Processing</li>
+                        <li>Deep Learning and Neural Networks</li>
+                        <li>AI Applications in Healthcare</li>
+                    </ul>
+                    <p style="margin-top: 20px;">I believe that AI has the potential to revolutionize various fields, and I am committed to contributing to this exciting area of research through both academic study and practical applications.</p>
+                </div>
+                <div class="skills">
+                    <h3>My Skills</h3>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>Machine Learning</span>
+                        <span>Deep Learning</span>
+                        <span>AI Research</span>
+                        <span>Computer Vision</span>
+                        <span>Data Analysis</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill">
+                            <div class="skill-name">
+                                <span>Machine Learning</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">
+                                <span>Deep Learning</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">
+                                <span>Computer Vision</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-name">
+                                <span>Data Analysis</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="publications-section">
+        <div class="publications-container">
+            <h2>My Publications</h2>
+            <div class="publications-content">
+                <div class="publication-item">
+                    <div class="publication-header">
+                        <h3>Deep Neural Networks for Disease Classification from Endoscopic Imaging</h3>
+                        <span class="publication-date">2024</span>
+                    </div>
+                    <div class="publication-details">
+                        <p class="publication-authors">Rupak Aryal, et al.</p>
+                        <p class="publication-conference">2024 International Conference on Emerging Research in Computational Science (ICERCS)</p>
+                        <div class="publication-links">
+                            <a href="https://ieeexplore.ieee.org/document/10895860" target="_blank" class="btn btn-outline">
+                                <i class="fas fa-external-link-alt"></i> View on IEEE Xplore
+                            </a>
+                            <a href="#" class="btn btn-outline">
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>Feel free to reach out to me for any inquiries or opportunities. I'll get back to you as soon as possible!</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>your.email@example.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+977 98XXXXXXXX</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Kathmandu, Nepal</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100007552184852" class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <form class="contact-form">
+                <h2>Send me a Message</h2>
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Rupak Aryal. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#publications">Publications</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                        
+                        // Update active navigation link
+                        document.querySelectorAll('.navbar a').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                    }
+                });
+            });
+
+            // Update active navigation link on scroll
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('section');
+                const navLinks = document.querySelectorAll('.navbar a');
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.pageYOffset >= sectionTop - 60) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${section.id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            });
+
+            // Form submission
+            const form = document.querySelector('.contact-form');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Message sent successfully!');
+                form.reset();
+            });
+        });
+    </script>
+</body>
+
+</html>
